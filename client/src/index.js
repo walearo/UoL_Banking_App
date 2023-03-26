@@ -9,7 +9,6 @@ import Customers from "./components/pages/Customer/Customers";
 import Transfer from "./components/pages/Transfer/Transfer";
 import Deposit from "./components/pages/Deposit/Deposit";
 import Withdraw from "./components/pages/Withdraw/Withdraw";
-import Transaction from "./components/pages/Transaction/Transaction";
 import Register from "./components/pages/Register/Register";
 import Login from "./components/pages/Login/Login";
 import UserLogin from "./components/pages/Login/UserLogin";
@@ -17,6 +16,7 @@ import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import VerifyEmailOtp from "./components/pages/Otp/VerifyEmailOtp";
 import BankUser from "./components/pages/Register/Bankuser";
+import Logout from "./components/pages/Login/Logout";
 
 const router = Router(
   [
@@ -46,11 +46,6 @@ const router = Router(
     errorElement:<PageNotFound />
   },
   {
-    path: "/transactions",
-    element: <Transaction />,
-    errorElement:<PageNotFound />
-  },
-  {
     path: "/register",
     element: <Register />,
     errorElement:<PageNotFound />
@@ -63,6 +58,11 @@ const router = Router(
   {
     path: "/login",
     element: <Login />,
+    errorElement:<PageNotFound />
+  },
+  {
+    path: "/logout",
+    element: <Logout />,
     errorElement:<PageNotFound />
   },
   {
